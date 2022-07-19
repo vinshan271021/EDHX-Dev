@@ -1,0 +1,23 @@
+{
+	"name": "SetVariabe01",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "Set",
+					"value": "0"
+				}
+			}
+		],
+		"variables": {
+			"Set": {
+				"type": "Boolean"
+			}
+		},
+		"annotations": []
+	}
+}
