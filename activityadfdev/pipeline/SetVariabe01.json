@@ -1,6 +1,7 @@
 {
 	"name": "SetVariabe01",
 	"properties": {
+		"description": ",,,",
 		"activities": [
 			{
 				"name": "Set variable1",
