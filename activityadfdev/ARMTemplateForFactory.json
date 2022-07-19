@@ -226,6 +226,9 @@
 				"variables": {
 					"Set": {
 						"type": "Boolean"
+					},
+					"abc": {
+						"type": "String"
 					}
 				},
 				"annotations": []
@@ -257,6 +260,9 @@
 				"variables": {
 					"Set": {
 						"type": "Boolean"
+					},
+					"abc": {
+						"type": "String"
 					}
 				},
 				"annotations": []
@@ -292,18 +298,40 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
+				"variables": {
+					"abc": {
+						"type": "String"
+					}
+				},
 				"annotations": []
 			},
 			"dependsOn": []
 		},
 		{
-			"name": "[concat(parameters('factoryName'), '/pipeline1')]",
+			"name": "[concat(parameters('factoryName'), '/pipeline3')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
 			"properties": {
+				"activities": [
+					{
+						"name": "Set variable1",
+						"type": "SetVariable",
+						"dependsOn": [],
+						"userProperties": [],
+						"typeProperties": {
+							"variableName": "abc",
+							"value": "RRR"
+						}
+					}
+				],
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
+				},
+				"variables": {
+					"abc": {
+						"type": "String"
+					}
 				},
 				"annotations": []
 			},
